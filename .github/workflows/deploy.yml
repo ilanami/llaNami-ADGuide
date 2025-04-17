@@ -32,12 +32,12 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v3
       
-      # --- SECCIÓN COMENTADA PARA DEBUG ---
-      # - name: Upload artifact
-      #   uses: actions/upload-pages-artifact@v2
-      #   with:
-      #     path: './build'
-      # --- FIN SECCIÓN COMENTADA ---
+      # --- PASO "UPLOAD ARTIFACT" DESCOMENTADO ---
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2 # <-- Asegúrate que esta línea está descomentada y usa @v2
+        with: # <-- Asegúrate que esta línea está descomentada
+          path: './build' # <-- Asegúrate que esta línea está descomentada
+      # --- FIN PASO "UPLOAD ARTIFACT" ---
 
 # --- JOB COMPLETO COMENTADO PARA DEBUG ---
 # deploy:
