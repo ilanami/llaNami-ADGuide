@@ -15,28 +15,28 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4 # <-- Actualizado a v4
 
       - name: Set up Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v3 # <-- v3 está bien (o puedes usar v4 si prefieres)
         with:
           node-version: 18
           cache: 'npm'
-
+      
       - name: Install dependencies
         run: npm install
-
+      
       - name: Build
         run: npm run build
-
+      
       - name: Setup Pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v5 # <-- Actualizado a v5 (la más reciente)
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2 # <-- Versión v2
+        uses: actions/upload-pages-artifact@v3 # <-- Actualizado a v3
         with:
           path: './build'
-
+  
   deploy:
     environment:
       name: github-pages
@@ -46,4 +46,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2 # <-- Versión v2
+        uses: actions/deploy-pages@v4 # <-- Actualizado a v4
