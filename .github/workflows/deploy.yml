@@ -34,7 +34,7 @@ jobs:
       
       # --- PASO "UPLOAD ARTIFACT" DESCOMENTADO ---
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2 # <-- Asegúrate que esta línea está descomentada y usa @v2
+        uses: actions/upload-pages-artifact@v1 # <-- Asegúrate que esta línea está descomentada y usa @v2
         with: # <-- Asegúrate que esta línea está descomentada
           path: './build' # <-- Asegúrate que esta línea está descomentada
       # --- FIN PASO "UPLOAD ARTIFACT" ---
